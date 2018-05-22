@@ -1,0 +1,23 @@
+{
+  "name": "dnd-autoblock",
+  "version": "1.0.0",
+  "description": "Takes in 5e character sheet pdfs and generates stat blocks.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "mocha",
+    "test:debug": "mocha --watch"
+  },
+  "author": "mikepawlak <mpawlak719@gmail.com>",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5"
+  },
+  "dependencies": {
+    "commander": "2.9.0",
+    "nodemon": "^1.17.2",
+    "pdf2json": "^1.1.7"
+  }
+}
