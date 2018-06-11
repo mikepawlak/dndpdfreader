@@ -2,6 +2,8 @@
 
 const prog = require('commander');
 const pkg = require('./package.json');
+const chldPr = require('child_process');
+const path = require('path');
 
 const parsePDF = require("./lib/pdf-parser.js");
 
@@ -41,6 +43,8 @@ prog
   .description('render a statblock to the browser')
   .action(path => {
     console.log("browser");
+    console.log(__dirname));
+    //chldPr.exec('google-chrome ./bin/view-markup.html');
   });
 
 prog.parse(process.argv);

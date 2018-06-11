@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "commander": "2.9.0",
+    "dotenv": "^6.0.0",
     "nodemon": "^1.17.2",
     "pdf2json": "^1.1.7"
   }
