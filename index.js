@@ -1,9 +1,12 @@
 'use strict';
 
+require('dotenv').config();
+
 const prog = require('commander');
 const pkg = require('./package.json');
 const chldPr = require('child_process');
 const path = require('path');
+const server = require('./lib/server.js');
 
 const parsePDF = require("./lib/pdf-parser.js");
 
@@ -43,8 +46,8 @@ prog
   .description('render a statblock to the browser')
   .action(path => {
     console.log("browser");
-    console.log(__dirname));
-    //chldPr.exec('google-chrome ./bin/view-markup.html');
+    chldPr.exec('node server.js');
+    chldPr.exec('google-chrome http://localhost:8080/ --a ' + path);
   });
 
 prog.parse(process.argv);

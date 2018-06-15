@@ -18,6 +18,8 @@
   "dependencies": {
     "commander": "2.9.0",
     "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-hbs": "^1.0.4",
     "nodemon": "^1.17.2",
     "pdf2json": "^1.1.7"
   }
