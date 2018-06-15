@@ -20,6 +20,7 @@ describe('parsePDF', () => {
     //statblock box[0]
     expect(statObj).to.have.a.property("name", "Pavel Brightwood");
     expect(statObj).to.have.a.property("alignment", "Chaotic Good");
+    expect(statObj).to.have.a.property("class", "Sorcerer (1)");
     //statblock box[1]
     expect(statObj).to.have.a.property("ac", "12");
     expect(statObj).to.have.a.property("hp", "7 (1d6+1)");
