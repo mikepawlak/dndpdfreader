@@ -58,17 +58,19 @@
       <p>{{ character.attacks }}</p>
     </property-block>
 
-    <h3>SpellCasting</h3>
+    {{#if character.spells}}
+      <h3>SpellCasting</h3>
 
-    <property-line>
-      {{#each character.spells}}
-        <h4 style="-webkit-margin-before: 0px;-webkit-margin-after: 0px;">{{ id }} <span style="font-weight: normal">(<em>DC:</em> {{ save_dc }}, <em>Bonus:</em> {{ attack_bonus }})</span></h4>
-        <p style="padding-left: 10px; -webkit-margin-before: 0px;-webkit-margin-after: 0px;">
-          {{{ spells }}}
-        </p>
-      {{/each}}
-    </property-line>
-
+      <property-line>
+        {{if }}
+        {{#each character.spells}}
+          <h4 style="-webkit-margin-before: 0px;-webkit-margin-after: 0px;">{{ id }} <span style="font-weight: normal">(<em>DC:</em> {{ save_dc }}, <em>Bonus:</em> {{ attack_bonus }})</span></h4>
+          <p style="padding-left: 10px; -webkit-margin-before: 0px;-webkit-margin-after: 0px;">
+            {{{ spells }}}
+          </p>
+        {{/each}}
+      </property-line>
+    {{/if}}
 
   </stat-block>
 
